@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-header">
+    <h1>Add new book</h1>
+  </div>
+  <div class="card-body">
+    <div class="container">
+      <form *ngIf="formGroup" [formGroup]="formGroup" (ngSubmit)="submit()">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Title</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Book Name" formControlName="title">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput2" class="form-label">Author</label>
+          <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Author" formControlName="author">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="description"></textarea>
+        </div>
+        <button class="btn btn-success" type="submit">Edit</button> |
+        <button class="btn btn-secondary" type="button" (click)="back()">Exit</button>
+      </form>
+    </div>
+  </div>
+</div>
